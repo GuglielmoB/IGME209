@@ -1,0 +1,22 @@
+21
+This is random number 1 and its value is: 38
+This is random number 2 and its value is: 7719
+This is random number 3 and its value is: 21238
+This is random number 4 and its value is: 2437
+This is random number 5 and its value is: 8855
+This is random number 6 and its value is: 11797
+This is random number 7 and its value is: 8365
+This is random number 8 and its value is: 32285
+This is random number 9 and its value is: 10450
+This is random number 10 and its value is: 30612
+This is random number 11 and its value is: 5853
+This is random number 12 and its value is: 28100
+This is random number 13 and its value is: 1142
+This is random number 14 and its value is: 281
+This is random number 15 and its value is: 20537
+This is random number 16 and its value is: 15921
+This is random number 17 and its value is: 8945
+This is random number 18 and its value is: 26285
+This is random number 19 and its value is: 2997
+This is random number 20 and its value is: 14680
+This is random number 21 and its value is: 20976
