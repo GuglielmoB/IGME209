@@ -16,7 +16,7 @@ void showGallows(int guessLimit)
 
 	if (guessLimit == 6) {
 		printf(" ________\n"
-				"|	  | \n"
+				"|   |\n"
 				"|     \n"
 				"|     \n"
 				"|      \n"
@@ -25,8 +25,8 @@ void showGallows(int guessLimit)
 	}
 	if (guessLimit == 5) {
 		printf(" ________\n"
-				"|	  | \n"
-				"|    O \n"
+				"|   |\n"
+				"|   O \n"
 				"|     \n"
 				"|      \n"
 				"|\n"
@@ -34,55 +34,55 @@ void showGallows(int guessLimit)
 	}
 	if (guessLimit == 4) {
 		printf(" ________\n"
-			"|	  | \n"
-			"|    O \n"
-			"|    |\n"
-			"|      \n"
-			"|\n"
-			"|\n");
+				"|   |\n"
+				"|   O \n"
+				"|   |\n"
+				"|      \n"
+				"|\n"
+				"|\n");
 	}
 	if (guessLimit == 3) {
 		printf(" ________\n"
-				"|	  | \n"
-				"|    O \n"
-				"|   /| \n"
+				"|   |\n"
+				"|   O \n"
+				"|  /| \n"
 				"|      \n"
 				"|\n"
 				"|\n");
 	}
 	if (guessLimit == 2) {
 		printf(" ________\n"
-				"|	  | \n"
-				"|    O \n"
-				"|   /|\\ \n"
+				"|   |\n"
+				"|   O \n"
+				"|  /|\\ \n"
 				"|      \n"
 				"|\n"
 				"|\n");
 	}
 	if (guessLimit == 1) {
 		printf(" ________\n"
-				"|	  | \n"
-				"|    O \n"
-				"|   /|\\ \n"
-				"|   /  \n"
+				"|   |\n"
+				"|   O \n"
+				"|  /|\\ \n"
+				"|  /  \n"
 				"|\n"
 				"|\n");
 	}
 	if (guessLimit == 0) {
 		printf(" ________\n"
-			"|	  | \n"
-			"|    O \n"
-			"|   /|\\ \n"
-			"|   / \\ \n"
-			"|\n"
-			"|\n");
+				"|   |\n"
+				"|   O \n"
+				"|  /|\\ \n"
+				"|  / \\ \n"
+				"|\n"
+				"|\n");
 	}
 }
 
 void showSolved(char word[], char guesses[]) 
 {
-	printf("Wrong guesses: %s", guesses);
-	printf("Your word so far: %s", word);
+	printf("Wrong guesses: %s \n", guesses);
+	printf("Your word so far: %s \n", word);
 	
 }
 
