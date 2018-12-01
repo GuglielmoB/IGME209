@@ -1,8 +1,9 @@
 #include "stdafx.h"
 #include "Player.h"
 #include <iostream>
+
 using namespace std;
-Player::Player() 
+Player::Player()
 {
 	wis = 10;
 	str = 10;
@@ -18,13 +19,12 @@ Player::Player(const char* pname, int stat1, int stat2, int stat3)
 	name = pname;
 }
 
-void Player::printPlayer() 
+void Player::printPlayer()
 {
 	cout << "Player: " << name << endl;
 	cout << "Strength: " << str << endl;
 	cout << "Wisdom: " << wis << endl;
-	cout << "Dexterity: " << dex << endl;
-	cout << endl;
+	cout << "Dexterity " << dex << endl;
 }
 
 
