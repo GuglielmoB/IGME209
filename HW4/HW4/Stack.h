@@ -13,21 +13,25 @@ public:
 	bool isEmpty();
 	int getSize();
 	void Print();
+	void deque(int bgnorend)
 	// friend ostream &operator<< (ostream &ostr, T const& rhs);
 private:
 	int numofentries;
 	T *entries;
 	int maxsize;
+	int dequeloc;
+	int cursize; // Necessary for deque because numofentries is used to keep track of location in the stack
 };
 
-template <class T>Stack<T>::Stack()
+template <class T>Stack<T>::Stack() // Stack constructor
 {
 	maxsize = 1;
 	entries = new T[maxsize];
 	numofentries = -1;
+	dequeloc = 0;
 }
 
-template <class T>Stack<T>::Stack(const Stack &stack)
+template <class T>Stack<T>::Stack(const Stack &stack) // Stack copy constructor
 {
 	Stack stck = &stack;
 }
@@ -45,7 +49,7 @@ template <class T> void Stack<T>::push(T data)
 	}
 	numofentries += 1;
 	entries[numofentries] = data;
-	
+	size += 1;
 }
 
 template <class T> void Stack<T>::pop() {
@@ -57,12 +61,32 @@ template <class T> void Stack<T>::pop() {
 	{
 		entries[numofentries] = NULL;
 		numofentries -= 1;
+		size -= 1;
+	}
+
+	if (numofentries <= 0 && entries[numofentries] == NULL) {
+		size = 0;
 	}
 
 }
 
+template <class T> void Stack<T>::deque(int bgnorend) // Input 0 to deque from the beginning or 1 to deque from the end 
+{
+	
+	if (bgnorend == 0)
+	{
+		entries[dequeloc] = NULL;
+		dequeloc += 1;
+		size -= 1;
+	}
+	else if (bgnorend == 1) 
+	{
+		pop();
+	}
+}
+
 template <class T> bool Stack<T>::isEmpty() {
-	if (numofentries < 0) {
+	if (size <= 0) {
 		return true;
 	}
 	else {
@@ -71,15 +95,12 @@ template <class T> bool Stack<T>::isEmpty() {
 }
 
 template <class T> int Stack<T>::getSize() {
-	if (numofentries < 0) {
+	if (entries[0] = NULL) {
 		return 0;
 	}
-	else if (numofentries == 0) {
-		return 1;
-	}
-	else
+	else 
 	{
-		return numofentries;
+		return numofentries + 1;
 	}
 	
 }
